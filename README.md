@@ -219,3 +219,16 @@ Projeto desenvolvido para a disciplina:
 ## 📄 Licença
 
 Projeto desenvolvido para fins acadêmicos.
+
+## 📸 Screenshots
+
+<div align="center">
+
+<img src="screenshots/home.jpg" width="220"/>
+<img src="screenshots/pokedex.jpg" width="220"/>
+<img src="screenshots/detail.jpg" width="220"/>
+
+<img src="screenshots/team-builder.jpg" width="220"/>
+<img src="screenshots/favorite.jpg" width="220"/>
+
+</div>
