@@ -1,68 +1,221 @@
-# CobbleDex
+# 📱 CobbleDex
 
-A modern React Native companion app for **Cobblemon** players — mobile Pokédex and team builder with a dark gamer aesthetic.
+<div align="center">
 
-## Tech stack
+### Companion App para jogadores de Cobblemon
 
-- React Native + Expo
-- React Navigation (stack + tabs)
-- Axios (optional PokeAPI enrichment)
-- AsyncStorage (favorites, recent, teams)
-- Reanimated animations
-- TypeScript + clean `src/` architecture
+Aplicativo mobile desenvolvido em React Native para auxiliar jogadores com informações de Pokémon, spawns, biomas, favoritos e montagem de equipes.
 
-## Features
+![React Native](https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
-- **Splash** — animated logo and Pokéball-inspired loader
-- **Home** — search, shortcuts (Pokédex / Team / Favorites / Spawns), featured & rare rows, biome explorer, types, recently viewed
-- **Web layout** — centered max-width column so the UI stays phone-sized in the browser (`src/utils/platformLayout.ts`, `App.tsx`)
-- **Pokédex** — full Gen I list (151), filters (type, biome, rarity), favorites
-- **Detail** — stats, Cobblemon-style spawn profile (dimension, weather, drops, blocks, capture tip), moves, evolutions, type matchups (tabbed)
-- **Team Builder** — 6-slot teams, stacked-weakness map, type-stacking warnings, coach suggestions, persistence
-- **Favorites** — offline via AsyncStorage
-- **Home search** — jumps to Pokédex with query, type, or biome pre-applied
-- **UI sounds** — optional SFX (toggle on Home); haptics on detail screen
-- **Branded icon** — generated dark/cyan CobbleDex artwork (`tools/generate-icon.js`)
+</div>
 
-## Getting started
+---
+
+## 📖 Sobre o Projeto
+
+O CobbleDex é um companion app desenvolvido para jogadores de Cobblemon.
+
+O objetivo do aplicativo é centralizar informações importantes sobre Pokémon em uma interface moderna e intuitiva, permitindo consultas rápidas durante a gameplay.
+
+O sistema foi desenvolvido como projeto acadêmico da disciplina **Programação Para Dispositivos Móveis em Android**, utilizando React Native e Expo.
+
+---
+
+## ✨ Funcionalidades
+
+### 🔍 Pokédex
+
+- Consulta de Pokémon
+- Busca por nome
+- Informações detalhadas
+- Visualização de tipos
+
+### 🌎 Informações de Spawn
+
+- Bioma
+- Dimensão
+- Horário
+- Raridade
+- Ambiente de spawn
+
+### ⭐ Favoritos
+
+- Adicionar Pokémon favoritos
+- Persistência local
+- Organização personalizada
+
+### ⚔️ Team Builder
+
+- Montagem de equipes
+- Análise de composição
+- Avaliação de cobertura de tipos
+
+### 🌐 Internacionalização
+
+- Português (Brasil)
+- Inglês
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+| Tecnologia | Finalidade |
+|------------|------------|
+| React Native | Desenvolvimento Mobile |
+| Expo | Ambiente de execução |
+| TypeScript | Tipagem e organização |
+| AsyncStorage | Persistência local |
+| React Navigation | Navegação entre telas |
+
+---
+
+## 📂 Estrutura do Projeto
+
+```txt
+src/
+│
+├── components/
+│   ├── ui/
+│   └── cards/
+│
+├── screens/
+│   ├── Home
+│   ├── Pokedex
+│   ├── PokemonDetail
+│   ├── Favorites
+│   └── TeamBuilder
+│
+├── context/
+│
+├── services/
+│
+├── data/
+│
+├── utils/
+│
+└── styles/
+```
+
+---
+
+## 📱 Principais Telas
+
+### Home
+
+Tela inicial com atalhos rápidos e destaques.
+
+### Pokédex
+
+Consulta completa dos Pokémon disponíveis.
+
+### Pokémon Detail
+
+Informações detalhadas:
+
+- Tipos
+- Status
+- Spawn
+- Evoluções
+- Golpes
+
+### Team Builder
+
+Montagem estratégica de equipes.
+
+---
+
+## 💾 Persistência de Dados
+
+O aplicativo utiliza AsyncStorage para armazenar:
+
+- Favoritos
+- Idioma selecionado
+- Equipes criadas
+
+Isso permite que as informações permaneçam disponíveis mesmo após fechar o aplicativo.
+
+---
+
+## 🚀 Como Executar
+
+### Instalar dependências
 
 ```bash
-cd CobbleDex
 npm install
+```
+
+### Executar projeto
+
+```bash
 npx expo start
 ```
 
-Use Expo Go on your device or press `a` / `i` for Android / iOS emulator.
-
-## Project structure
-
-```
-src/
-├── assets/
-├── components/     # UI, Pokémon cards, team slots
-├── screens/
-├── routes/
-├── services/
-├── data/           # Gen I database + type chart
-├── hooks/
-├── styles/
-├── context/
-└── utils/
-```
-
-- **Web layout** — centered column (`src/utils/platformLayout.ts`, wrapped in `App.tsx`) so the UI does not stretch on desktop browsers.
-
-## Regenerate assets
+### Executar com limpeza de cache
 
 ```bash
-node tools/generate-sounds.js
-node tools/generate-icon.js
+npx expo start --clear
 ```
 
-## Data
+---
 
-All 151 Generation I Cobblemon are included locally in `src/data/gen1Database.ts` with mock spawn/evolution/move data suitable for Cobblemon-style gameplay. Sprites load from the public PokeAPI sprites CDN (requires network for images; all text data works offline).
+## 🧪 Testes
 
-## License
+Os testes foram realizados utilizando:
 
-Fan companion project — not affiliated with Nintendo, Mojang, or Cobblemon.
+- Expo Go
+- Android
+- Ambiente local de desenvolvimento
+
+Foram validados:
+
+- Navegação
+- Persistência
+- Busca
+- Favoritos
+- Team Builder
+
+---
+
+## 🎯 Aprendizados
+
+Durante o desenvolvimento foram estudados:
+
+- Desenvolvimento Mobile
+- React Native
+- Estruturação de Componentes
+- Navegação entre Telas
+- Persistência Local
+- Design Mobile First
+- Organização de Projetos
+
+---
+
+## 🔮 Melhorias Futuras
+
+- APK próprio
+- Login de usuário
+- API dedicada
+- Mais gerações de Pokémon
+- Sistema online
+- Banco de dados remoto
+
+---
+
+## 👨‍💻 Autor
+
+**Yuri de Jesus Fernandes Mendes**
+
+Projeto desenvolvido para a disciplina:
+
+**Programação Para Dispositivos Móveis em Android**  
+**UNIRUY / Wyden**  
+**Professor Enderson Santos**
+
+---
+
+## 📄 Licença
+
+Projeto desenvolvido para fins acadêmicos.
